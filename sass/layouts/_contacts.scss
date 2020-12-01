@@ -1,0 +1,17 @@
+.contacts__address,
+.contacts__link {
+  font-size: 14px;
+  line-height: 1.71;
+}
+.contacts__link {
+  display: block;
+  color: $contactsTextColor;
+  margin-top: 9px;
+  text-decoration: none;
+}
+.contacts__address {
+  $color: #ffffff;
+  color: $color;
+  margin-top: 20px;
+  margin-bottom: 0;
+}

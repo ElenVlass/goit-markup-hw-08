@@ -1,0 +1,85 @@
+.works__section {
+  padding-left: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 24px;
+}
+.works__title {
+  margin-bottom: 0;
+  @include font(18px, 2, 0.06em);
+  color: $titleTextColor;
+}
+.works__subtitle {
+  margin-top: 4px;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.87;
+  color: $primaryTextColor;
+}
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.works__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid #eeeeee;
+  flex-basis: calc(100% / 3 - 30px);
+}
+.works__link {
+  text-decoration: none;
+}
+.works__link:hover .works__holder,
+.works__link:focus .works__holder {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
+    0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.works__thumb {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $worksOverlay;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 250ms $timingFunction, transform 250ms $timingFunction;
+  }
+}
+.works__link:hover .works__thumb::before,
+.works__link:focus .works__thumb::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.works__description {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  align-items: center;
+  color: $heroTitleColor;
+  @include font(18px, 1.56);
+  overflow: auto;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 250ms $timingFunction, transform 250ms $timingFunction;
+
+  .works__link:hover &,
+  .works__link:focus & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

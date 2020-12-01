@@ -1,0 +1,35 @@
+.join {
+  display: block;
+  margin-left: 70px;
+  padding-top: 12px;
+}
+.join__title{
+@extend %captions;
+  color: $teamBgColor;
+  margin-bottom: 20px;
+}
+.join__list {
+  display: flex;
+  text-decoration: none;
+}
+.join__item {
+  display: inline-flex;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.join__link {
+@include flex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $heroTitleColor;
+  background-color: $primaryTextColor;
+  transition: background-color 250ms $timingFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}

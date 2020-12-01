@@ -1,0 +1,58 @@
+.hero {
+  text-align: center;
+}
+
+.hero__container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero--overlay {
+  outline: 1px solid blueviolet;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img17.jpg);
+  background-color: $darkBgdColor;
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $heroTitleColor;
+  @include font(44px, 1.36, 0.06em, 900);
+}
+.button__hero {
+  @extend %button;
+}
+.button__hero {
+  padding: 10px 32px;
+  min-width: 200px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  @include font(16px, 1.87, 0.06em);
+  color: $heroTitleColor;
+  background-color: $accentColor;
+  font-family: inherit;
+  text-align: center;
+  transition: color 250ms $timingFunction,
+    background-color 250ms $timingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    background-color: $heroTitleColor;
+  }
+}

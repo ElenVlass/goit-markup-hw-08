@@ -1,0 +1,36 @@
+.clients__list {
+  display: flex;
+}
+.clients__link {
+  $borderColor: #afb1b8;
+@include flex();
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid;
+  border-color: $borderColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms $timingFunction;
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+  }
+}
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients__icon {
+  fill: $iconColor;
+  transition: fill 250ms $timingFunction;
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $accentColor;
+  }
+}
+.clients__title  {
+@extend %titles;
+}

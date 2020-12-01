@@ -1,0 +1,15 @@
+
+.team {
+  background-color: $teamBgColor;
+}
+
+
+.team__list {
+  display: flex;
+  margin-right: -30px;
+  flex-wrap: wrap;
+}
+
+.team__headline {
+@extend %titles;
+}

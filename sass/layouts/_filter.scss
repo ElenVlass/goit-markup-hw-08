@@ -1,0 +1,21 @@
+.filter__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter__button {
+@extend %button;
+  padding: 6px 22px;
+  background-color: $filterBgColor;
+  font-weight: 500;
+  @include font(16px, 1.62, 0.03em);
+
+  &:hover,
+  &:focus {
+    color: $heroTitleColor;
+    background: $accentColor;
+  }
+}

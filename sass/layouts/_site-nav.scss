@@ -1,0 +1,32 @@
+.site-nav {
+  @include flex();
+}
+.site-nav__link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: $titleTextColor;
+  transition: color 250ms $timingFunction;
+
+  &--current {
+    position: relative;
+    color: $accentColor;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -24px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accentColor;
+    }
+  }
+}
+.site-nav__link {
+  @extend %nav-link;
+}
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
