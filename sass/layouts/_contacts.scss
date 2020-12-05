@@ -6,12 +6,21 @@
 .contacts__link {
   display: block;
   color: $contactsTextColor;
-  margin-top: 9px;
+  margin-top: 8px;
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 9px;
+  }
 }
 .contacts__address {
   $color: #ffffff;
   color: $color;
   margin-top: 20px;
   margin-bottom: 0;
+}
+.contacts {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }

@@ -62,7 +62,7 @@
   text-transform: uppercase;
 }
 
-.work__title, .clients__title {
+.work__title {
   margin-bottom: 50px;
   color: #212121;
   font-size: 36px;
@@ -71,7 +71,7 @@
   font-weight: 700;
 }
 
-.team__headline {
+.team__headline, .clients__title {
   margin-bottom: 30px;
   color: #212121;
   font-size: 28px;
@@ -214,13 +214,8 @@ link {
   fill: #ffffff;
 }
 
-.logo__accent {
-  color: #2196f3;
-}
-
 .logo {
   display: inline-block;
-  margin-right: 93px;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
@@ -231,8 +226,16 @@ link {
   color: #212121;
 }
 
+.logo--header {
+  margin-right: 93px;
+}
+
 .logo--inverse {
   color: #ffffff;
+}
+
+.logo__accent {
+  color: #2196f3;
 }
 
 .form__title {
@@ -821,10 +824,8 @@ link {
   border-color: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
-  .clients__item {
-    flex-basis: calc(100% / 2 - 30px);
-  }
+.clients__item {
+  flex-basis: calc(100% / 2 - 30px);
 }
 
 @media screen and (min-width: 768px) {
@@ -850,9 +851,16 @@ link {
 }
 
 .footer-container {
-  display: flex;
+  display: block;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+  }
 }
 
 .contacts__address,
@@ -864,8 +872,14 @@ link {
 .contacts__link {
   display: block;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 9px;
+  margin-top: 8px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    margin-top: 9px;
+  }
 }
 
 .contacts__address {
@@ -874,10 +888,27 @@ link {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .contacts {
+    margin-bottom: 60px;
+  }
+}
+
 .join {
   display: block;
-  margin-left: 70px;
-  padding-top: 12px;
+}
+
+@media screen and (max-width: 1199px) {
+  .join {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+    padding-top: 12px;
+  }
 }
 
 .join__title {
@@ -887,6 +918,7 @@ link {
 
 .join__list {
   display: flex;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -914,14 +946,24 @@ link {
   background-color: #2196f3;
 }
 
-.subscribe {
-  padding-top: 12px;
-  margin-left: 93px;
+@media scren and (min-width: 1200px) {
+  .subscribe {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
 }
 
-.subscribe__field {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    margin-bottom: 60px;
+  }
+}
+
+@media scren and (min-width: 768px) {
+  .subscribe__field {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .subscribe__input {
@@ -929,6 +971,7 @@ link {
   height: 50px;
   padding: 15px 16px;
   margin-right: 12px;
+  margin-bottom: 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -940,6 +983,12 @@ link {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 380px) {
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
 .subscribe__input:-webkit-autofill, .subscribe__input:-webkit-autofill:hover, .subscribe__input:-webkit-autofill:focus {
   border: 1px solid #69696b;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
@@ -948,6 +997,8 @@ link {
 }
 
 .subscribe__button {
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
   text-align: center;

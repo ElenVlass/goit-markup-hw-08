@@ -1,9 +1,6 @@
-.logo__accent {
-  color: $accentColor;
-}
 .logo {
   display: inline-block;
-  margin-right: 93px;
+
   font-family: "Raleway", sans-serif;
 
   @include font(26px, 1.19, 0.03em);
@@ -11,6 +8,12 @@
   text-decoration: none;
   color: $titleTextColor;
 }
+.logo--header {
+  margin-right: 93px;
+}
 .logo--inverse {
   color: $heroTitleColor;
+}
+.logo__accent {
+  color: $accentColor;
 }
