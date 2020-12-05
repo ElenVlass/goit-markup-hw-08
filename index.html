@@ -11,22 +11,32 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <div class="container header-container">
-      <nav class="menu">
+    <!-- <header class="page-header">
+      <div class="header-container">
+    
         <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
+              <button type="button" class="menu__btn" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+                  <use class="menu__close-icon" href="./images/sprite.svg#close_nav"></use>
+                  <use class="menu__open-icon" href="./images/sprite.svg#menu_nav"></use>
+                </svg>
+              </button>
+          <nav class="menu" id="menu-container" data-menu>
         <ul class="site-nav list">
           <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a></li>
           <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
           <li class="site-nav__item"><a href="#Contacts" class="site-nav__link">Контакты</a></li>
         </ul>
-      </nav>
+     
       <ul class="aut-nav list">
         <li class="aut-nav__item"><a href="mailto:info@devstudio.com" class="aut-nav__link"><svg class="aut-nav__mail-icon"><use href="./images/sprite.svg#mail"></use></svg>info@devstudio.com</a></li>
         <li class="aut-nav__item"><a href="tel:+380961111111" class="aut-nav__link"><svg class="aut-nav__tel-icon"><use href="./images/sprite.svg#tel"></use></svg>+38 096 111 11 11</a></li>
       </ul>
+</nav>
+
+    
     </div>
-    </header>
+    </header> -->
     <main>
       <section class="hero hero--overlay">
         <div class="container hero__container">
@@ -36,8 +46,8 @@
           <button data-modal-open type="button" class="button__hero">Заказать услугу</button>
         </div>
       </section>
-      <!-- Секция преимуществ-->
-      <section class="section qualities">
+     
+     <section class="section qualities">
         <div class="container">
           <h2 class="qualities--visually-hidden">Наши преимущества</h2>
           <ul class="list qualities__list">
@@ -74,7 +84,7 @@
         
       </section>
 
-      <section class="section">
+     <section class="section">
         <div class="work container">
           <h2 class="work__title">Чем мы занимаемся</h2>
          <ul class="work__headline list">
@@ -206,7 +216,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section>  
       <section class="section">
         <div class="clients container">
           <h2 class="clients__title">Постоянные клиенты</h2>
@@ -234,7 +244,7 @@
       </section>
     </main>
 
-    <footer class="dark-bg">
+    <!-- <footer class="dark-bg">
       <div class="container footer-container">
         <div class="contacts">
           <a href="./index.html" class="logo"><span class="logo__accent">Web</span><span class="logo--inverse">Studio</span></a>
@@ -267,8 +277,8 @@
           </form>
         </div>
       </div>
-    </footer>
-    <div class="backdrop is-hidden" data-modal>
+    </footer>  -->
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close" data-modal-close tabindex="8"><svg width="11" height="11">
             <use href="./images/sprite-forms.svg#close"></use>
@@ -303,8 +313,9 @@
          <button class="submit__button" type="submit" tabindex="7">Отправить</button>
       </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
@@ -315,15 +326,7 @@
           );
         });
       })();
-      (() => {
-        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-          e.preventDefault();
 
-          new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
-          );
-        });
-      })();
     </script>
   </body>
 </html>

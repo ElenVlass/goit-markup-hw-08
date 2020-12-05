@@ -1,12 +1,14 @@
 .clients__list {
-  display: flex;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -30px;
+  }
 }
 .clients__link {
   $borderColor: #afb1b8;
-@include flex();
-
-  width: 170px;
-  height: 90px;
+  @include flex();
 
   border: 1px solid;
   border-color: $borderColor;
@@ -14,14 +16,31 @@
   border-radius: 4px;
   transition: border-color 250ms $timingFunction;
 
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 90px;
+  }
+
   &:hover,
   &:focus {
     border-color: $accentColor;
   }
 }
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+
+.clients__item {
+  @media screen and (min-width: 480px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1199px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
+
 .clients__icon {
   fill: $iconColor;
   transition: fill 250ms $timingFunction;
@@ -31,6 +50,6 @@
     fill: $accentColor;
   }
 }
-.clients__title  {
-@extend %titles;
+.clients__title {
+  @extend %titles;
 }

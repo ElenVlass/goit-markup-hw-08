@@ -1,15 +1,13 @@
-.aut-nav {
-  display: inline-flex;
-  margin-left: auto;
-}
-.aut-nav__item:not(:last-child) {
-  @extend .site-nav__item:not(:last-child);
-}
+// .aut-nav {
+
+//  display: inline-flex;
+// }
+
 .aut-nav__link {
   @extend %nav-link;
 }
 .aut-nav__link {
-  @include flex();
+  // @include flex();
   padding-top: 8px;
   padding-bottom: 8px;
   color: $primaryTextColor;
@@ -38,3 +36,6 @@
     fill: $accentColor;
   }
 }
+// .aut-nav__item:not(:last-child) {
+//   @extend .site-nav__item:not(:last-child);
+// }

@@ -1,8 +1,12 @@
 .work {
+  display: none;
   padding-top: 0;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 .work__title {
-@extend %titles;
+  @extend %titles;
 }
 .work__headline {
   display: inline-flex;
@@ -17,7 +21,7 @@
   }
 }
 .work__subject {
-    @extend %captions;
+  @extend %captions;
   position: absolute;
   display: block;
   bottom: 0;

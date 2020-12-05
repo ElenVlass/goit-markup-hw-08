@@ -3,13 +3,15 @@
 }
 
 .hero__container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero--overlay {
-  outline: 1px solid blueviolet;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -20,22 +22,39 @@
     ),
     url(../images/img17.jpg);
   background-color: $darkBgdColor;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 .hero__title {
   margin-top: 0;
   margin-bottom: 30px;
-  max-width: 700px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
   text-transform: uppercase;
 
   color: $heroTitleColor;
-  @include font(44px, 1.36, 0.06em, 900);
+  @include font(26px, 1.61, 0.06em, 900);
+
+  @media screen and (min-width: $desktop) {
+    @include font(44px, 1.36, 0.06em, 900);
+    max-width: 700px;
+  }
 }
-.button__hero {
-  @extend %button;
-}
+
 .button__hero {
   padding: 10px 32px;
   min-width: 200px;

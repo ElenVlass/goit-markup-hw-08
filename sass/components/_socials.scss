@@ -1,3 +1,6 @@
+.social {
+  text-align: center;
+}
 .social__list {
   display: inline-flex;
 }
@@ -24,7 +27,7 @@
   .social__link:focus & {
     fill: $heroTitleColor;
   }
-   .join__link:hover &,
+  .join__link:hover &,
   .join__link:focus & {
     fill: $heroTitleColor;
   }

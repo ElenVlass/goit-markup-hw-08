@@ -1,15 +1,24 @@
-
 .team {
   background-color: $teamBgColor;
 }
 
-
 .team__list {
-  display: flex;
-  margin-right: -30px;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // margin-right: -30px;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-right: -30px;
+    flex-wrap: wrap;
+  }
 }
 
 .team__headline {
-@extend %titles;
+  @extend %titles-adaptiv;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }

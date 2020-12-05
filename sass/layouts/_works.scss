@@ -40,6 +40,7 @@
 .works__thumb {
   position: relative;
   overflow: hidden;
+
   &::before {
     content: "";
     display: block;
@@ -53,12 +54,13 @@
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 250ms $timingFunction, transform 250ms $timingFunction;
+
+    .works__link:hover &,
+    .works__link:focus & {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
-.works__link:hover .works__thumb::before,
-.works__link:focus .works__thumb::before {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .works__description {

@@ -76,6 +76,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1px solid tomato;
 }
 
 body {
@@ -111,14 +112,32 @@ link {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  outline: 2px solid tomato;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .list {
@@ -141,6 +160,10 @@ link {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.social {
+  text-align: center;
 }
 
 .social__list {
@@ -184,7 +207,7 @@ link {
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   margin-right: 93px;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -200,87 +223,74 @@ link {
   color: #ffffff;
 }
 
-.submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.submit__checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: absolute;
-}
-
-.submit__icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  background: #ffffff;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.submit__checkbox:checked + .submit__icon {
-  background-color: #2196f3;
-  fill: #ffffff;
-  border-color: #2196f3;
-  background-image: url(../images/check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.submit__label {
-  display: block;
-  margin-left: 7px;
-  display: 14px;
-  justify-content: 1.71;
-  align-items: center;
-  color: #757575;
-}
-
-.submit-link {
-  color: #2196f3;
-}
-
-.submit__button {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-style: none;
+.page-header {
+  position: relative;
 }
 
 .header-container {
+  padding: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .header-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-container {
+    width: 1200px;
+  }
 }
 
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px;
+  text-align: center;
+}
+
+.menu.is-open {
+  display: block;
+}
+
+.menu__btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu__close-icon {
+  display: none;
+}
+
+.menu__btn.is-open .menu__open-icon {
+  display: none;
+}
+
+.menu__btn.is-open .menu__close-icon {
+  display: block;
 }
 
 .site-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 60px;
 }
 
 .site-nav__link {
@@ -300,26 +310,18 @@ link {
   position: absolute;
   display: block;
   left: 0;
-  bottom: -24px;
+  bottom: -4px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: #2196f3;
 }
 
-.site-nav__item:not(:last-child), .aut-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.aut-nav {
-  display: inline-flex;
-  margin-left: auto;
+.site-nav__item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .aut-nav__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
   color: #757575;
