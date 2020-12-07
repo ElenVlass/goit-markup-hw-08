@@ -415,13 +415,10 @@ link {
   }
 }
 
-.aut-nav {
-  text-align: start;
-}
-
 @media screen and (min-width: 1200px) {
   .aut-nav {
     display: inline-flex;
+    text-align: start;
   }
 }
 
