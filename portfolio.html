@@ -14,26 +14,37 @@
 </head>
 
 <body>
-    <header>
-        <div class="container header-container">
-            <nav class="menu">
-                <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
+    <header class="page-header">
+        <div class="header-container">
+    
+            <a href="./index.html" class="logo logo--header"><span class="logo__accent">Web</span>Studio</a>
+            <button type="button" class="menu__btn" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+                    <use class="menu__close-icon" href="./images/sprite.svg#close_nav"></use>
+                    <use class="menu__open-icon" href="./images/sprite.svg#menu_nav"></use>
+                </svg>
+            </button>
+            <nav class="menu" id="menu-container" data-menu>
                 <ul class="site-nav list">
                     <li class="site-nav__item"><a href="./index.html"
                             class="site-nav__link">Студия</a></li>
-                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфолио</a></li>
+                    <li class="site-nav__item site-nav__item--current"><a href="./portfolio.html" class="site-nav__link  site-nav__link--current">Портфолио</a></li>
                     <li class="site-nav__item"><a href="#Contacts" class="site-nav__link">Контакты</a></li>
                 </ul>
+    
+                <ul class="aut-nav list">
+                    <li class="aut-nav__item"><a href="mailto:info@devstudio.com" class="aut-nav__link"><svg
+                                class="aut-nav__mail-icon">
+                                <use href="./images/sprite.svg#mail"></use>
+                            </svg>info@devstudio.com</a></li>
+                    <li class="aut-nav__item"><a href="tel:+380961111111" class="aut-nav__link"><svg
+                                class="aut-nav__tel-icon">
+                                <use href="./images/sprite.svg#tel"></use>
+                            </svg>+38 096 111 11 11</a></li>
+                </ul>
             </nav>
-            <ul class="aut-nav list">
-                <li class="aut-nav__item"><a href="mailto:info@devstudio.com" class="aut-nav__link"><svg
-                            class="aut-nav__mail-icon">
-                            <use href="./images/sprite.svg#mail"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="aut-nav__item"><a href="tel:+380961111111" class="aut-nav__link"><svg class="aut-nav__tel-icon">
-                            <use href="./images/sprite.svg#tel"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+    
+    
         </div>
     </header>
     <main>
@@ -202,19 +213,20 @@
                             </svg></a></li>
                 </ul>
             </div>
-                    <div class="subscribe">
-                        <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
-                        <form class="subscribe__field">
-                            <input class="subscribe__input" type="email" name="mail" placeholder="E-mail" autocomplete="email">
-                            <button class="subscribe__button">Подписаться
-                                <svg class="icon-send">
-                                    <use href="./images/sprite.svg#send"></use>
-                                </svg></button>
-                    
-                        </form>
-                    </div>
+            <div class="subscribe">
+                <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
+                <form class="subscribe__field">
+                    <input class="subscribe__input" type="email" name="mail" placeholder="E-mail" autocomplete="email">
+                    <button class="subscribe__button">Подписаться
+                        <svg class="icon-send">
+                            <use href="./images/sprite.svg#send"></use>
+                        </svg></button>
+    
+                </form>
+            </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
     </body>
     
     </html>

@@ -1,7 +1,9 @@
-// .aut-nav {
-
-//  display: inline-flex;
-// }
+.aut-nav {
+  text-align: start;
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+  }
+}
 
 .aut-nav__link {
   @extend %nav-link;
@@ -36,6 +38,11 @@
     fill: $accentColor;
   }
 }
-// .aut-nav__item:not(:last-child) {
-//   @extend .site-nav__item:not(:last-child);
-// }
+.aut-nav__item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
+}

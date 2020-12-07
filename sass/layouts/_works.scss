@@ -18,16 +18,25 @@
   color: $primaryTextColor;
 }
 .works__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 .works__item {
-  margin-top: 30px;
-  margin-left: 30px;
-  border: 1px solid #eeeeee;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 1px solid #eeeeee;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 .works__link {
   text-decoration: none;

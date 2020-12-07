@@ -2,14 +2,22 @@
   display: inline-block;
 
   font-family: "Raleway", sans-serif;
-
-  @include font(26px, 1.19, 0.03em);
+  @include font(24px, 1.17, 0.03em);
   font-weight: 700;
   text-decoration: none;
   color: $titleTextColor;
+
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 1.19, 0.03em);
+  }
 }
 .logo--header {
-  margin-right: 93px;
+  // @media screen and (min-width: 768px) {
+  //   margin-right: 88px;
+  // }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .logo--inverse {
   color: $heroTitleColor;

@@ -205,8 +205,8 @@ link {
 .logo {
   display: inline-block;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   font-weight: 700;
   font-weight: 700;
@@ -214,8 +214,19 @@ link {
   color: #212121;
 }
 
-.logo--header {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo--header {
+    margin-right: 93px;
+  }
 }
 
 .logo--inverse {
@@ -258,18 +269,32 @@ link {
 }
 
 .menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
   background-color: #ffffff;
   padding: 60px;
   text-align: center;
+  z-index: 3;
 }
 
 .menu.is-open {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .menu__btn {
@@ -278,6 +303,14 @@ link {
   height: 40px;
   background-color: transparent;
   border: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 767px) {
+  .menu__btn {
+    display: none;
+  }
 }
 
 .menu__close-icon {
@@ -292,8 +325,18 @@ link {
   display: block;
 }
 
-.site-nav {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .site-nav {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .site-nav__link {
@@ -320,8 +363,44 @@ link {
   background-color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav__link--current::after {
+    bottom: -24px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:last-child {
+    margin-right: 84px;
+  }
+}
+
 .site-nav__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__item.site-nav__item--current {
+    margin-bottom: 52px;
+  }
+}
+
+.aut-nav {
+  text-align: start;
+}
+
+@media screen and (min-width: 1200px) {
+  .aut-nav {
+    display: inline-flex;
+  }
 }
 
 .aut-nav__link {
@@ -356,14 +435,50 @@ link {
   fill: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .aut-nav__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .aut-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
 .filter__list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__list {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item {
+  margin-bottom: 15px;
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item {
+    margin-bottom: 0;
+  }
 }
 
 .filter__button {
@@ -405,18 +520,33 @@ link {
   color: #757575;
 }
 
-.works__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+@media screen and (min-width: 768px) {
+  .works__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .works__item {
-  margin-top: 30px;
-  margin-left: 30px;
-  border: 1px solid #eeeeee;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .works__item {
+    margin-bottom: 0;
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 1px solid #eeeeee;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .works__link {
@@ -486,9 +616,17 @@ link {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer-container {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
