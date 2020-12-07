@@ -1,5 +1,5 @@
 .subscribe {
-  @media scren and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 12px;
     margin-left: 93px;
   }
@@ -8,7 +8,7 @@
   }
 }
 .subscribe__field {
-  @media scren and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
   }
@@ -32,6 +32,9 @@
 
   @media screen and (max-width: 380px) {
     width: 100%;
+  }
+  @media screen and (min-width: 1199px) {
+    margin-bottom: 0;
   }
 
   &:-webkit-autofill,

@@ -88,7 +88,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid tomato;
 }
 
 body {
@@ -453,7 +452,8 @@ link {
 }
 
 .header-container {
-  padding: 10px 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -470,6 +470,13 @@ link {
 @media screen and (min-width: 768px) {
   .header-container {
     width: 768px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -505,6 +512,15 @@ link {
     display: flex;
     align-items: center;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    width: inherit;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -578,6 +594,12 @@ link {
   .site-nav__link--current::after {
     bottom: -24px;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__link--current::after {
+    bottom: -28px;
   }
 }
 
@@ -884,11 +906,14 @@ link {
   }
 }
 
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1199px) {
   .clients__list {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-right: -30px;
     margin-bottom: -30px;
   }
@@ -914,6 +939,7 @@ link {
 
 @media screen and (min-width: 1200px) {
   .clients__link {
+    width: 170px;
     height: 90px;
   }
 }
@@ -1048,7 +1074,7 @@ link {
   background-color: #2196f3;
 }
 
-@media scren and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .subscribe {
     padding-top: 12px;
     margin-left: 93px;
@@ -1061,7 +1087,7 @@ link {
   }
 }
 
-@media scren and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .subscribe__field {
     display: flex;
     align-items: center;
@@ -1088,6 +1114,12 @@ link {
 @media screen and (max-width: 380px) {
   .subscribe__input {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .subscribe__input {
+    margin-bottom: 0;
   }
 }
 

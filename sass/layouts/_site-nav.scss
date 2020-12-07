@@ -30,6 +30,9 @@
         bottom: -24px;
         margin-bottom: 0;
       }
+      @media screen and (min-width: 1200px) {
+        bottom: -28px;
+      }
     }
   }
 }
