@@ -1,4 +1,8 @@
 .aut-nav {
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    text-align: start;
+  }
   @media screen and (min-width: 1200px) {
     display: inline-flex;
     text-align: start;

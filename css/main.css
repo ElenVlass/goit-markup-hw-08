@@ -636,6 +636,13 @@ link {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .aut-nav {
+    display: inline-block;
+    text-align: start;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .aut-nav {
     display: inline-flex;
