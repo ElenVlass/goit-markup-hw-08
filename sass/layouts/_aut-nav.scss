@@ -9,12 +9,14 @@
   @extend %nav-link;
 }
 .aut-nav__link {
-  // @include flex();
   padding-top: 8px;
   padding-bottom: 8px;
   color: $primaryTextColor;
   transition-property: color;
   transition-delay: 250ms;
+  @media screen and (min-width: 1200px) {
+    @include flex();
+  }
 }
 .aut-nav__mail-icon {
   margin-right: 10px;
@@ -44,5 +46,6 @@
   }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }

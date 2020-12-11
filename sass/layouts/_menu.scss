@@ -3,7 +3,7 @@
   padding: 60px;
   text-align: center;
 
-  z-index: 3;
+  z-index: 1;
 
   &.is-open {
     display: block;
@@ -49,4 +49,10 @@
 }
 .menu__btn.is-open .menu__close-icon {
   display: block;
+}
+.menu__btn:hover .menu__close-icon,
+.menu__btn:focus .menu__close-icon,
+.menu__btn:hover .menu__open-icon,
+.menu__btn:focus .menu__open-icon {
+  fill: $accentIconColor;
 }
