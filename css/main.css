@@ -437,10 +437,6 @@ link {
   margin-bottom: 30px;
 }
 
-.person:not(:last-child) {
-  margin-right: 30px;
-}
-
 @media screen and (min-width: 768px) {
   .person {
     margin-right: 30px;
