@@ -447,7 +447,6 @@ link {
 @media screen and (min-width: 1200px) {
   .person {
     flex-basis: calc(100% / 4 - 30px);
-    margin-right: 0;
   }
 }
 

@@ -1,22 +1,3 @@
-.works__section {
-  padding-left: 24px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-right: 24px;
-}
-.works__title {
-  margin-bottom: 0;
-  @include font(18px, 2, 0.06em);
-  color: $titleTextColor;
-}
-.works__subtitle {
-  margin-top: 4px;
-  margin-bottom: 0;
-
-  font-size: 16px;
-  line-height: 1.87;
-  color: $primaryTextColor;
-}
 .works__list {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -28,6 +9,7 @@
 .works__item {
   margin-bottom: 30px;
   @media screen and (min-width: 768px) {
+    display: flex;
     margin-bottom: 0;
     margin-top: 30px;
     margin-left: 30px;
@@ -40,11 +22,18 @@
 }
 .works__link {
   text-decoration: none;
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+    display: flex;
+  }
 }
 .works__link:hover .works__holder,
 .works__link:focus .works__holder {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
     0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.works__holder {
+  flex-grow: 1;
 }
 .works__thumb {
   position: relative;
@@ -93,4 +82,23 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.works__section {
+  padding-left: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 24px;
+}
+.works__title {
+  margin-bottom: 0;
+  @include font(18px, 2, 0.06em);
+  color: $titleTextColor;
+}
+.works__subtitle {
+  margin-top: 4px;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.87;
+  color: $primaryTextColor;
 }
